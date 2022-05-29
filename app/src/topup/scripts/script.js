@@ -33,7 +33,7 @@ function confirmCheckout(){
         // alert(resp.message+"\nPayment Code/VA Number: "+(resp.data.payment_code||resp.data.va_numbers[0].va_number)+"\nJumlah Tagihan: "+resp.data.gross_amount)
         alert(resp.message)
         $('#payment-code-num').val(resp.data.payment_code||'Not available')
-        $('#virtual-acc-num').val(resp.data.va_numbers===undefined?'':resp.data.va_numbers[0].va_number)
+        $('#virtual-acc-num').val(resp.data.va_numbers===undefined?'Not available':resp.data.va_numbers[0].va_number)
         $('#instruction-text').html(resp.data.instruction||'Not available')
       },
       error: function (resp) {
