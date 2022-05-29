@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+    <title>Topup</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,43 +53,37 @@
         <div class="main-content">
             <div class="content">
                 <div class="input">
+                    <div class="amount-input">
+                        <label for="amount-num">Nominal Topup</label>
+                        <input type="number" name="amount-num" id="amount-num">
+                    </div>
+                    <div class="payment-code-input">
+                        <label for="payment-code-num">Payment Code</label>
+                        <input type="text" name="payment-code-num" id="payment-code-num" disabled value="" placeholder="Confirm to generate">
+                    </div>
                     <div class="virtual-acc-input">
                         <label for="virtual-acc-num">Nomor akun virtual</label>
-                        <input type="text" name="virtual-acc-num" id="virtual-acc-num" disabled value="">
+                        <input type="text" name="virtual-acc-num" id="virtual-acc-num" disabled value="" placeholder="Confirm to generate">
                     </div>
                     <div class="select-agen-bank">
-                        <label for="agen-bank">Pilih Agen/Bank</label>
+                        <label for="agen-bank">Pilih Metode Pembayaran</label>
                         <div class="agen-bank">
                             <select name="agen-bank" id="agen-bank">
-                                <option value="empty">-</option>
-                                <optgroup label="Agen">
-                                    <option value="alfamidi">Alfamidi</option>
-                                    <option value="alfamart">Alfamart</option>
-                                    <option value="indomaret">Indomaret</option>
+                                <option value="empty">Metode Pembayaran</option>
+                                <optgroup label="Store" value="cstore">
+                                    <option value="1">Indomaret</option>
                                 </optgroup>
-                                <optgroup label="Bank">
-                                    <option value="bni">BNI</option>
-                                    <option value="bri">BRI</option>
-                                    <option value="mandiri">Bank Mandiri</option>
+                                <optgroup label="Bank Transfer" value="bank_transfer">
+                                    <option value="2">BRI</option>
                                 </optgroup>
                             </select>
                         </div>
-                    </div>
-                    <div class="select-instruction">
-                        <label for="instruction">Instruksi Pembayaran</label>
-                        <div class="instruction">
-                            <select name="instruction" id="instruction">
-                                <option value="empty">-</option>
-                                <option value="bni-mobile">BNI Mobile Banking</option>
-                                <option value="bni-internet">BNI Internet Banking</option>
-                                <option value="bni-atm">ATM BNI</option>
-                            </select>
-                        </div>
-                    </div>
+                    </div>                    
                 </div>
                 <div class="instruction-detail">
-                    <div class="instruction-text">
-                        <ol>
+                    <div id="instruction-text">
+                        Confirm to generate
+                        <!-- <ol>
                             <li>Login ke <strong>ibank.bni.co.id</strong></li>
                             <li>Pilih menu <strong>TRANSAKSI > VIRTUAL ACCOUNT BILLING</strong></li>
                             <li>Masukkan nomor akun virtual yang muncul pada kolom awal, pilih rekening sumber anda kemudian klik <strong>“Lanjut”</strong></li>
@@ -99,11 +93,11 @@
                         <p>Catatan :</p>
                         <ul>
                             <li>Jumlah minimum untuk top up HiPay adalah Rp. 10.000</li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>
-            <button class="btn-confirm" id="btn-confirm" onclick="confirmCheckout()">Konfirmasi</button>
+            <button class="btn-confirm" id="btn-confirm" onclick="confirmCheckout()">Confirm</button>
         </div>
     </div>
     <script src="../scripts/script.js"></script>

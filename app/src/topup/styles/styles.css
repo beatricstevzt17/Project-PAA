@@ -223,7 +223,7 @@ p,h1,h2,h3{
   padding: 0 40px;
 }
 
-.instruction-text{
+#instruction-text{
   border: 1px solid var(--color-input-border);
   border-radius: 10px;
   padding: 10px;
@@ -257,8 +257,8 @@ select {
   margin-bottom: 20px;
 } */
 
-.agen-bank, .instruction, #virtual-acc-num{
-  margin: 5px 0 20px 0;
+.agen-bank, .instruction, input{
+  margin: 5px 0 10px 0;
 }
 
 .agen-bank, .instruction {
@@ -292,12 +292,12 @@ select,
   grid-area: select;
 }
 
-.virtual-acc-input{
+.virtual-acc-input, .payment-code-input, .amount-input{
   display: flex;
   flex-direction: column;
 }
 
-#virtual-acc-num{
+input{
   border: 1px solid var(--color-input-border);
   border-radius: 10px;
   padding: 10px 0.5em;
