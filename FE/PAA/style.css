@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.bodylr{
+    background-color: #D7E4FF;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    background-color: #152647;
+}
+.nav-item{
+    padding-left: 20px;
+}
+.container {
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#imglp{
+    margin-left: 50px;
+    margin-top: 40px;
+    width: 4px;
+    height: 4px;
+}
+
+#formlog{
+    height: 550px;
+    width: 500px;
+    padding: 0 35px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    border-radius: 20px;
+    border: 1px solid #789ADE;
+}
+
+.card-title{
+    font-weight: bold;
+}
+.btn-login {
+    height: 35px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: #152647;
+    color: rgb(255, 255, 255);
+}
+
+.link {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #152647;
+    text-decoration: none;
+}
+
+#loginalt{
+    margin-top: 15px;
+    margin-left: 140px;
+}
+
+.img-google1 {
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+.img-fb1 {
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.img-acc {
+    height: 30px;
+    width: 30px;
+}
+
+.title-rgs{
+    font-weight: bold;
+    margin-left: 400px;
+}
+
+#formregist{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 550px;
+    width: 1000px;
+    padding: 0 35px;
+    background-color: #D7E4FF;
+}
+.regct{
+    border-radius: 10px;
+}
+.btn-regist {
+    height: 35px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: #152647;
+    color: rgb(255, 255, 255);
+    width: 400px;
+    margin-left: 255px;
+}
+#registalt{
+    margin-top: 15px;
+    margin-left: 390px;
+}
+.img-google2 {
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 405px;
+}
+
+.img-fb2 {
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.otpinput {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgb(235, 235, 235);
+}
+
+.modal {
+    position: absolute;
+    transform: translate(0%, 20%);
+}
+.otpbtn{
+    height: 30px;
+    width: 150px;
+    border-radius: 8px;
+    font-weight: 300;
+    background-color: #152647;
+    color: rgb(255, 255, 255);
+}
+
+#otpform {
+    text-align: center;
+}
