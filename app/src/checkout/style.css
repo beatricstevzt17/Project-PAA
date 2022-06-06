@@ -9,10 +9,14 @@
 }
 
 body {
-    background-color: #b064f7;
+    background-color: #EDEDED;
     line-height: 1rem;
     font-size: 14px;
     /* padding: 10px */
+}
+
+.card{
+    border-radius: 25px;
 }
 
 ul.navbar-nav{
