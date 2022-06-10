@@ -1,13 +1,3 @@
-<?php
-require_once "../presenter/getByCategory.php";
-
-$response = (array)getByCategory();
-
-setlocale(LC_MONETARY, "id_ID");
-$result = $response["data"]["rows"];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +10,7 @@ $result = $response["data"]["rows"];
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles1.css">
     <title>Produk</title>
 </head>
 
@@ -40,7 +30,7 @@ $result = $response["data"]["rows"];
                             <form class="mx-4">
                                 <div class="input-group">
                                     <span class="input-group-text px-2" id="basic-addon1" style="background-color: white;"><img src="../assets/icons/search.svg" alt="" height="20"></span>
-                                    <input class="form-control ms-auto p-1 bd-highlight me-2" size="25" type="search" placeholder="Search" aria-label="Search">
+                                    <input class="form-control ms-auto p-1 bd-highlight me-2" size="25" type="search" placeholder="Search" aria-label="Search" id="search">
                                 </div>
                             </form>
                             <img height="24" src="../assets/icons/favorite.svg" alt="favorite">
@@ -123,41 +113,23 @@ $result = $response["data"]["rows"];
                         </div>
                         <div class="d-flex">
                             <div class="mx-2">
-                                <div class="p2"><span style="color: red;">1</span>/100</div>
+                                <div class="p2 pagination"><span style="color: red;">1</span>/100</div>
                             </div>
                             <div class="d-flex ">
                                 <div class="p3 d-flex align-items-center px-2 py-1">
-                                    <img src="../assets/icons/left-arrow.png" style="width: 1rem; height : 1rem;" alt="">
+                                    <img class="pagination" src="../assets/icons/left-arrow.png" style="width: 1rem; height : 1rem;" alt="">
                                 </div>
                                 <div class="p4 d-flex align-items-center px-2 py-1">
-                                    <img src="../assets/icons/right-arrow.png" style="width: 1rem; height : 1rem;" alt="">
+                                    <img class="pagination" src="../assets/icons/right-arrow.png" style="width: 1rem; height : 1rem;" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <center><img id="loading" width="400" src="../assets/images/gif.gif" alt=""></center>
                     <div class="items-data row mx-1 py-3">
-                        <?php for ($i = 0; $i < count($result); $i++) : ?>
-                            <div class='col-md-4'>
-                                <div class="card" style="width: 16rem;">
-                                    <img src="../assets/images/laptop1.jpg" class="card-img-top" alt="gambar.">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?= $result[$i]["name"] ?></h5>
-                                        <p class="price">Rp <?= number_format($result[$i]["price"], 2, ",", ".") ?></p>
+                        <div class="col-md-4">
 
-                                        <div class="d-flex flex-row mt-4">
-                                            <div class="col-3 discount">10%</div>
-                                            <div class="col-9 real-price">Rp <?= number_format((int)$result[$i]["price"] * 90 / 100, 2, ",", ".") ?></div>
-                                        </div>
-
-                                        <div class="d-flex flex-row mt-3">
-                                            <img src="../assets/icons/location.svg" class="maps" alt="icon maps">
-                                            <div class="col-9 kota">Kota Semarang</div>
-                                            <img src="../assets/icons/love.svg" class="love" alt="icon maps">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endfor ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,6 +137,7 @@ $result = $response["data"]["rows"];
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../scripts/script3.js"></script>
 </body>
 
 </html>
