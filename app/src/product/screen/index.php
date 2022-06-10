@@ -1,3 +1,13 @@
+<?php
+require_once "../presenter/getByCategory.php";
+
+$response = (array)getByCategory();
+
+setlocale(LC_MONETARY, "id_ID");
+$result = $response["data"]["rows"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -126,17 +136,17 @@
                         </div>
                     </div>
                     <div class="items-data row mx-1 py-3">
-                        <?php for ($i = 0; $i < 9; $i++) : ?>
+                        <?php for ($i = 0; $i < count($result); $i++) : ?>
                             <div class='col-md-4'>
-                                <div class="card" style="width: 16rem; height : 22rem;">
+                                <div class="card" style="width: 16rem;">
                                     <img src="../assets/images/laptop1.jpg" class="card-img-top" alt="gambar.">
                                     <div class="card-body">
-                                        <h5 class="card-title">Laptop ASUS ROG</h5>
-                                        <p class="price">Rp 19.800.000</p>
+                                        <h5 class="card-title"><?= $result[$i]["name"] ?></h5>
+                                        <p class="price">Rp <?= number_format($result[$i]["price"], 2, ",", ".") ?></p>
 
                                         <div class="d-flex flex-row mt-4">
                                             <div class="col-3 discount">10%</div>
-                                            <div class="col-9 real-price">22.000.000</div>
+                                            <div class="col-9 real-price">Rp <?= number_format((int)$result[$i]["price"] * 90 / 100, 2, ",", ".") ?></div>
                                         </div>
 
                                         <div class="d-flex flex-row mt-3">
