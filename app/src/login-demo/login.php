@@ -24,5 +24,9 @@ if (isset($_POST["login"])) {
     $context  = stream_context_create($options);
     $result = file_get_contents("https://paa-account.herokuapp.com/api/v1/users/login", false, $context);
     $response = json_decode($result, true);
-    echo $response["token"];
+    if ($response["status"]) {
+        header("Location: ../product/screen"); // Ubah lokasi sesuai yg kalian ingin
+    }
+    // Ketika credential tidak sesuai maka tidak bisa meneruskan ke halaman lain
+    exit;
 }
