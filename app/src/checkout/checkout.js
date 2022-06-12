@@ -30,7 +30,7 @@ function confirmCheckout() {
             shipper_id: $('#shipper_id').val(),
             cart_id: "3"
         }
-        fetch('http://127.0.0.1:3000/order', {
+        fetch('https://hitech-order.herokuapp.com/order', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
