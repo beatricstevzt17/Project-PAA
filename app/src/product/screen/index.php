@@ -1,3 +1,8 @@
+<?php
+$page = 1;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../styles/styles1.css">
+    <link rel="stylesheet" href="../styles/styles12.css">
     <title>Produk</title>
 </head>
 
@@ -52,14 +57,14 @@
                     <br>
                     <span id="banner-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor molestias sit iusto, eum, incidunt fugiat sapiente corrupti ipsum doloremque sequi voluptatum nesciunt, voluptas officiis in enim mollitia corporis ut laboriosam sunt quos eius! Earum laborum sint rem, nihil ipsa dolorum.</span>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4" id="banner1-position">
+                <div class="col col-12 col-sm-12 col-md-6 col-lg-4" id="banner1-position">
                     <img src="../assets/images/laptop1.svg" height="50%" alt="">
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4" id="banner2-position">
+                <div class="col col-12 col-sm-12 col-md-6 col-lg-4" id="banner2-position">
                     <img src="../assets/images/laptop2.svg" height="50%" alt="">
                 </div>
             </div>
-            <div class="row content">
+            <div class="row content my-5">
                 <div class="filter col col-md-2">
                     <div class="row">
                         <div class="col-2 mt-3">
@@ -113,13 +118,13 @@
                         </div>
                         <div class="d-flex">
                             <div class="mx-2">
-                                <div class="p2 pagination"><span style="color: red;">1</span>/100</div>
+                                <div class="p2 pagination"><span style="color: red;" id="count"></span>/100</div>
                             </div>
-                            <div class="d-flex ">
-                                <div class="p3 d-flex align-items-center px-2 py-1">
+                            <div class="d-flex" style="z-index: 2;">
+                                <div id="prev" onclick="decrement()" class="p3 d-flex align-items-center px-2 py-1">
                                     <img class="pagination" src="../assets/icons/left-arrow.png" style="width: 1rem; height : 1rem;" alt="">
                                 </div>
-                                <div class="p4 d-flex align-items-center px-2 py-1">
+                                <div id="next" onclick="increment()" class="p4 d-flex align-items-center px-2 py-1">
                                     <img class="pagination" src="../assets/icons/right-arrow.png" style="width: 1rem; height : 1rem;" alt="">
                                 </div>
                             </div>
@@ -137,7 +142,24 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../scripts/script3.js"></script>
+    <script src="../scripts/script2.js"></script>
+    <script>
+        var data = 1;
+
+        document.getElementById("count").innerText = data;
+
+        function increment() {
+            data = data + 1;
+            document.getElementById("count").innerText = data;
+        }
+
+        function decrement() {
+            if (data > 1) {
+                data = data - 1;
+                document.getElementById("count").innerText = data;
+            }
+        }
+    </script>
 </body>
 
 </html>
