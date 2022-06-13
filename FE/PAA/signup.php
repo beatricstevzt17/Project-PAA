@@ -87,12 +87,6 @@
         <div class="row">
             <div class="col">
                 <div class="mb-4 mt-2">
-                    <label for="text" class="form-label">image</label>
-                    <input class="form-control" type="text" name="image" placeholder="Input link gambar">
-                </div>
-            </div>
-            <div class="col">
-                <div class="mb-4 mt-2">
                     <label for="text" class="form-label">Address</label>
                     <input class="form-control"type="text" name="address" placeholder="Input Alamat">
                 </div>

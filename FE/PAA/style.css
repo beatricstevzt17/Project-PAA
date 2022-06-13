@@ -111,6 +111,16 @@ input[type="text"] {
     width: 400px;
     margin-left: 255px;
 }
+
+.btn-adress {
+    height: 35px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: #152647;
+    color: rgb(255, 255, 255);
+    width: 400px;
+    margin-left: 255px;
+}
 #registalt{
     margin-top: 15px;
     margin-left: 390px;
@@ -130,7 +140,7 @@ input[type="text"] {
 }
 .otpinput {
     text-align: center;
-    width: 40px;
+    width: 150px;
     height: 40px;
     border-radius: 30px;
     background-color: rgb(235, 235, 235);

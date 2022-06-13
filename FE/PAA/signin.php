@@ -86,41 +86,6 @@
                         <button class="btn-login" type="submit" id="login" name="login">Login</button>
                     </div>
                 </form>
-                <!-- <form action="login.php" method="POST">
-                    <div class="mb-4 mt-4">
-                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Your Email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1"
-                            placeholder="Enter Password">
-                    </div>
-
-                    <div class="d-flex justify-content-between">
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                        </div>
-                        
-                        <div>
-                            <h class="link" id="myBtn" data-bs-toggle="modal" data-bs-target="#myModal">Forget Password ?</a>
-                        </div>
-                    </div>
-
-                    <div class="d-grid mt-4">
-                        <button type="submit" class="btn-login">Sign In</button>
-                    </div>
-                    <div id="loginalt">
-                        <a>or continue with</a>
-                    </div>
-                    <div class="log-account">
-                        <button type="submit" class="img-google1"><img src="image/google.png" alt="Gmail"
-                                class="img-acc"></button>
-                        <button type="submit" class="img-fb1"><img src="image/fb.png" alt="fb" class="img-acc"></button>
-                    </div>
-                </form> -->
             </div>
         </div>
         <div id="imglp">
@@ -131,27 +96,23 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <form id="otpform">
+                    <form id="otpform" action="otp.php" method="POST">
                         <h2>OTP Verification</h2>
                         <p>We Will send a one time password on this E-Mail</p>
-                        <!-- <p class="link">evosrrq@gmail.com</p> -->
                         <div class="mb-4 mt-2">
-                            <label for="text" class="form-label">Password</label>
-                            <input class="form-control" type="Password" name="password" placeholder="Input Password">
+                            <label for="text" class="form-label">Email</label>
+                            <input class="form-control" type="email" name="email" placeholder="Input Email">
                         </div>
                         <br>
                         <div class="userInput">
-                            <input type="text" class="otpinput" maxlength="1">
-                            <input type="text" class="otpinput" maxlength="1">
-                            <input type="text" class="otpinput" maxlength="1">
-                            <input type="text" class="otpinput" maxlength="1">
+                            <input name="otp" type="text" class="otpinput" maxlength="6">
                         </div>
                         <br>
-                        <p>00:00</p>
-                        <label>Do not send OTP ? <a href="#" class="link">Send OTP</a></label>
+                        <p>00:30</p>
+                        <label>Do not send OTP ? <button class="link" type="submit" id="sendotp" name="sendotp">Send OTP</button></label>
                         <br>
                         <br>
-                        <button class="otpbtn" type="submit" id="login" name="login">Login</button>
+                        <button class="otpbtn" type="submit" id="loginotp" name="loginotp">Login</button>
                         <!-- <button class="otpbtn">Submit</button> -->
                     </form>
                 </div>

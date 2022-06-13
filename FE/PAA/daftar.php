@@ -6,7 +6,7 @@ if (isset($_POST["Daftar"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
     $address = $_POST["address"];
-    $image = $_POST["image"];
+    $image = "-";
 
     if ($_POST['password'] !== $_POST['retypePassword']) {
         die('Password and Confirm password should match!');   
