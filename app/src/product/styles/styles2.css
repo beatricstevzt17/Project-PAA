@@ -71,7 +71,6 @@ body {
 
 .items-data {
   background-color: transparent;
-  height: 220vh;
 }
 
 .items-category {
@@ -170,7 +169,6 @@ body {
 .real-price {
   font-size: 10px;
   color: red;
-  text-decoration: line-through;
   text-align: justify;
   align-items: center;
 }

@@ -30,22 +30,22 @@
                 <a href="#" class="section-no-filled">discount</a>
             </div>
             <div id="title2" class="title2 col-lg-3 col-sm-3 justify-content-end>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="d-flex align-items-center justify-content-end">
-                        <form class="mx-4 hideSearch">
-                            <div class="input-group">
-                                <span class="input-group-text px-2" id="basic-addon1" style="background-color: white;"><img src="../assets/icons/search.svg" alt="" height="20"></span>
-                                <input class="form-control ms-auto p-1 bd-highlight me-2" size="25" type="search" placeholder="Search" aria-label="Search">
-                            </div>
-                        </form>
-                        <div class="d-flex align-items-center justify-content-end box-section-filled">
-                            <img height="24" src="../assets/icons/favorite.svg" alt="favorite">
-                            <img class="mx-4" height="26" src="../assets/icons/cart.svg" alt="cart">
-                            <img height="32" src="../assets/icons/person.svg" alt="person">
+                <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex align-items-center justify-content-end">
+                    <form class="mx-4 hideSearch">
+                        <div class="input-group">
+                            <span class="input-group-text px-2" id="basic-addon1" style="background-color: white;"><img src="../assets/icons/search.svg" alt="" height="20"></span>
+                            <input class="form-control ms-auto p-1 bd-highlight me-2" id="search_navbar" size="25" type="search" placeholder="Search" aria-label="Search">
                         </div>
+                    </form>
+                    <div class="d-flex align-items-center justify-content-end box-section-filled">
+                        <img height="24" src="../assets/icons/favorite.svg" alt="favorite">
+                        <img class="mx-4" height="26" src="../assets/icons/cart.svg" alt="cart">
+                        <img height="32" src="../assets/icons/person.svg" alt="person">
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </nav>
     <div class="container-fluid">
@@ -63,62 +63,42 @@
                     <img src="../assets/images/laptop2.svg" height="50%" alt="">
                 </div>
                 <div id="menu-container">
-                        <div class="navigate nav-left"><img src="../assets/icons/left-arrow.png" alt="left arrow" height="35px"></div>
-                        <div class="menu-box">
-                            <div class="icon"><img src="../assets/icons/tv.png" alt="left arrow" height="45px"></div>
-                            <div class="menu-title"><small>TV</small></div>
+                    <div class="navigate nav-left"><img src="../assets/icons/left-arrow.png" alt="left arrow" height="35px"></div>
+                    <div class="menu-box">
+                        <div class="icon"><img src="../assets/icons/tv.png" alt="left arrow" height="45px"></div>
+                        <div class="menu-title"><small>TV</small></div>
+                    </div>
+                    <div class="menu-box">
+                        <div class="icon"><img src="../assets/icons/phone.png" alt="left arrow" height="45px"></div>
+                        <div class="menu-title"><small>HP</small></div>
+                    </div>
+                    <div class="menu-box">
+                        <div class="icon"><img src="../assets/icons/ac.png" alt="left arrow" height="45px"></div>
+                        <div class="menu-title"><small>AC</small></div>
+                    </div>
+                    <div class="menu-box">
+                        <div class="icon"><img src="../assets/icons/pc.png" alt="left arrow" height="45px"></div>
+                        <div class="menu-title"><small>PC</small></div>
+                    </div>
+                    <div class="menu-box">
+                        <div class="icon"><img src="../assets/icons/wm.png" alt="left arrow" height="40px"></div>
+                        <div class="menu-title"><small>WM</small></div>
+                    </div>
+                    <div class="navigate nav-right">
+                        <img src="../assets/icons/right-arrow.png" alt="rigth arrow" height="35px">
+                    </div>
+                    <div class="search-menu">
+                        <div class="input-group" id="search-menu">
+                            <span class="input-group-text" id="basic-addon1" style="background-color: white;"><img src="../assets/icons/search.svg" alt="" height="20"></span>
+                            <input class="form-control" id="search_menu" size="25" type="search" placeholder="Search" aria-label="Search">
                         </div>
-                        <div class="menu-box">
-                            <div class="icon"><img src="../assets/icons/phone.png" alt="left arrow" height="45px"></div>
-                            <div class="menu-title"><small>HP</small></div>
-                        </div>
-                        <div class="menu-box">
-                            <div class="icon"><img src="../assets/icons/ac.png" alt="left arrow" height="45px"></div>
-                            <div class="menu-title"><small>AC</small></div>
-                        </div>
-                        <div class="menu-box">
-                            <div class="icon"><img src="../assets/icons/pc.png" alt="left arrow" height="45px"></div>
-                            <div class="menu-title"><small>PC</small></div>
-                        </div>
-                        <div class="menu-box">
-                            <div class="icon"><img src="../assets/icons/wm.png" alt="left arrow" height="40px"></div>
-                            <div class="menu-title"><small>WM</small></div>
-                        </div>
-                        <div class="navigate nav-right">
-                            <img src="../assets/icons/right-arrow.png" alt="rigth arrow" height="35px">
-                        </div>
-                        <div class="search-menu">
-                            <div class="input-group" id="search-menu">
-                                <span class="input-group-text" id="basic-addon1" style="background-color: white;"><img src="../assets/icons/search.svg" alt="" height="20"></span>
-                                <input class="form-control" size="25" type="search" placeholder="Search" aria-label="Search">
-                            </div>
-                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="container" id="main-content" style="padding-left: 5em;">
+            <center><img id="custom-loading" width="400" style="margin-top: 120vh;" src="../assets/images/Spinner-1s-200px.gif" alt=""></center>
+            <div class="container" id="main-content" style="padding-left: 5em;display:hidden">
                 <div class="items-data row">
-                    <?php for ($i = 0; $i < 9; $i++) : ?>
-                        <div class='col-md-4'>
-                            <div class="card" style="width: 16rem; height : 22rem;">
-                                <img src="../assets/images/laptop1.jpg" class="card-img-top" alt="gambar.">
-                                <div class="card-body">
-                                    <h5 class="card-title">Laptop ASUS ROG</h5>
-                                    <p class="price">Rp 19.800.000</p>
-
-                                    <div class="d-flex flex-row mt-4">
-                                        <div class="col-3 discount">10%</div>
-                                        <div class="col-9 real-price">22.000.000</div>
-                                    </div>
-
-                                    <div class="d-flex flex-row mt-3">
-                                        <img src="../assets/icons/location.svg" class="maps" alt="icon maps">
-                                        <div class="col-9 kota">Kota Semarang</div>
-                                        <img src="../assets/icons/love.svg" class="love" alt="icon maps">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endfor ?>
+                    <!-- konten -->
                 </div>
             </div>
         </div>

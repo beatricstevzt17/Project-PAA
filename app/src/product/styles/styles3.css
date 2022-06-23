@@ -113,6 +113,7 @@ nav.hideNav .box-section-filled {
 
 #menu-container > div.menu-box > div.icon > img {
   margin: 6px 0;
+  cursor: pointer;
 }
 
 #menu-container > div.menu-box > div.menu-title > small {
@@ -139,4 +140,28 @@ div.container-fluid > div.mycontainer > div.container#main-content {
   position: absolute;
   top: 105vh;
   left: 10%;
+}
+
+/* style discont strikethrough */
+span.strikethrough {
+  position: relative;
+}
+span.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: inherit;
+
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+#custom-loading {
+  background-color: url("../assets/images/Spinner-1s-200px.gif");
 }
